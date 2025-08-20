@@ -7,12 +7,15 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Layout/>} >
-         <Route index element={<Home/>} />
-         <Route path='/:slug' element={<Detail/>} />
-        </Route>
-      </Routes>
+    
+       <Routes> 
+          <Route path='/' element={<Layout/>} >
+            <Route index element={<Home/>} />
+            <Route path='products/:id' element={<Detail/>} />
+          </Route>
+        </Routes>
+
+  
     </BrowserRouter>
   )
 }
